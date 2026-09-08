@@ -7,10 +7,10 @@ export default function App() {
       <p>A wider spread of deliberate accessibility issues, used to test the Auto-Fix pipeline across many rule types.</p>
 
       {/* button-name */}
-      <button className="icon-btn" aria-label="Menu"><svg width="16" height="16"><rect width="16" height="16" /></svg></button>
+      <button className="icon-btn"><svg width="16" height="16"><rect width="16" height="16" /></svg></button>
 
       {/* image-alt */}
-      <img className="banner-img" src="banner.svg" alt="Banner" />
+      <img className="banner-img" src="banner.svg" />
 
       {/* label (has a placeholder, so the deterministic fallback can fix it) */}
       <input className="search-input" type="text" placeholder="Search products" />
