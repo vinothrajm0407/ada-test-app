@@ -10,7 +10,7 @@ export default function App() {
       <button className="icon-btn"><svg width="16" height="16"><rect width="16" height="16" /></svg></button>
 
       {/* image-alt */}
-      <img className="banner-img" src="banner.svg" />
+      <img className="banner-img" src="banner.svg" alt="Banner" />
 
       {/* label (has a placeholder, so the deterministic fallback can fix it) */}
       <input className="search-input" type="text" placeholder="Search products" />
