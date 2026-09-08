@@ -28,7 +28,7 @@ export default function App() {
       <iframe className="promo-frame" src="https://example.com/promo"></iframe>
 
       {/* select-name */}
-      <select className="role-select">
+      <select className="role-select" aria-label="Role">
         <option value="">Choose a role</option>
         <option value="dev">Developer</option>
         <option value="qa">QA</option>
