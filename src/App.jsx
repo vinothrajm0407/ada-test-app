@@ -16,7 +16,7 @@ export default function App() {
       <input className="search-input" type="text" placeholder="Search products" />
 
       {/* link-name */}
-      <a className="social-link" href="https://example.com"><svg width="16" height="16"><circle cx="8" cy="8" r="8" /></svg></a>
+      <a className="social-link" href="https://example.com" aria-label="Learn more"><svg width="16" height="16"><circle cx="8" cy="8" r="8" /></svg></a>
 
       {/* heading-order: skips h2 */}
       <h3 className="section-heading">Section heading</h3>
