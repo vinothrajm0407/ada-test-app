@@ -5,34 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>ADA Test App</title>
   <style>
-    .muted-text {
-      color: #767676;
-      background: #ffffff;
-    }
+    body { font-family: sans-serif; margin: 0; }
+    nav { background: #222; padding: 12px 20px; }
+    nav a { color: #444; margin-right: 16px; text-decoration: none; }
+    .content { padding: 20px; max-width: 800px; }
+    .muted-text { color: #767676; background: #ffffff; }
+    .icon-btn { width: 16px; height: 16px; padding: 0; border: none; background: #eee; }
   </style>
 </head>
 <body>
-  <h1>ADA Test App</h1>
-  <p>A wider spread of deliberate accessibility issues, used to test the Auto-Fix pipeline across many rule types.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="media.html">Media</a>
+  </nav>
 
-  <button class="icon-btn" aria-label="Menu"><svg width="16" height="16"><rect width="16" height="16" /></svg></button>
+  <div class="content">
+    <h1 id="main-title">ADA Test App</h1>
+    <p>A wider spread of deliberate accessibility issues, used to test the Auto-Fix pipeline across many rule types.</p>
 
-  <img class="banner-img" src="banner.svg" alt="Banner">
+    <!-- duplicate-id -->
+    <h2 id="main-title">Welcome</h2>
 
-  <input class="search-input" type="text" placeholder="Search products">
+    <!-- button-name -->
+    <button class="icon-btn"><svg width="16" height="16"><rect width="16" height="16" /></svg></button>
 
-  <a class="social-link" href="https://example.com" aria-label="Learn more"><svg width="16" height="16"><circle cx="8" cy="8" r="8" /></svg></a>
+    <!-- image-alt -->
+    <img src="banner.svg" width="200" height="60">
 
-  <h3 class="section-heading">Section heading</h3>
+    <!-- link-name -->
+    <a href="https://example.com" class="social-link"><svg width="16" height="16"><circle cx="8" cy="8" r="8" /></svg></a>
 
-  <p class="muted-text">Muted text with insufficient contrast</p>
+    <!-- heading-order: h1 -> h2 above -> jumps to h4 -->
+    <h4 class="section-heading">Section heading</h4>
 
-  <iframe class="promo-frame" src="https://example.com/promo"></iframe>
+    <!-- color-contrast -->
+    <p class="muted-text">Muted text with insufficient contrast</p>
 
-  <select class="role-select">
-    <option value="">Choose a role</option>
-    <option value="dev">Developer</option>
-    <option value="qa">QA</option>
-  </select>
+    <!-- frame-title -->
+    <iframe class="promo-frame" src="https://example.com/promo" width="300" height="150"></iframe>
+
+    <!-- select-name -->
+    <select class="role-select">
+      <option value="">Choose a role</option>
+      <option value="dev">Developer</option>
+      <option value="qa">QA</option>
+    </select>
+
+    <!-- tabindex: positive tabindex anti-pattern -->
+    <p>Jump order test: <a href="products.html" tabindex="3">Products</a> <a href="contact.html" tabindex="1">Contact</a></p>
+
+    <!-- list built from divs instead of ul/li -->
+    <div class="fake-list">
+      <div>First item</div>
+      <div>Second item</div>
+      <div>Third item</div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!-- document-title: empty title -->
+  <title></title>
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    nav { background: #222; padding: 12px 20px; }
+    nav a { color: #444; margin-right: 16px; text-decoration: none; }
+    .content { padding: 20px; max-width: 800px; }
+    table { border-collapse: collapse; width: 100%; }
+    td { border: 1px solid #ccc; padding: 6px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="media.html">Media</a>
+  </nav>
+
+  <div class="content">
+    <h1>Dashboard</h1>
+
+    <!-- heading-order: h1 -> h5 -->
+    <h5>Monthly summary</h5>
+
+    <!-- image-alt: informational chart image with no alternative text -->
+    <img src="chart.svg" width="300" height="150">
+
+    <!-- table: header cells built with td instead of th, no scope -->
+    <table>
+      <tr>
+        <td>Month</td>
+        <td>Visitors</td>
+        <td>Conversions</td>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>1,204</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>1,532</td>
+        <td>101</td>
+      </tr>
+    </table>
+
+    <!-- aria-hidden-focus: aria-hidden wraps a focusable control -->
+    <div aria-hidden="true">
+      <button>Export data</button>
+    </div>
+
+    <!-- scrollable-region-focusable: scrollable div with no keyboard access -->
+    <div style="overflow-y: scroll; height: 80px; border: 1px solid #ccc;">
+      <p>Row one of a long scrolling log panel that keyboard users cannot reach.</p>
+      <p>Row two of a long scrolling log panel that keyboard users cannot reach.</p>
+      <p>Row three of a long scrolling log panel that keyboard users cannot reach.</p>
+      <p>Row four of a long scrolling log panel that keyboard users cannot reach.</p>
+    </div>
+
+    <!-- click handler on a div acting as a button, no role/tabindex/keyboard support -->
+    <div class="refresh-btn" onclick="location.reload()">Refresh</div>
+  </div>
+</body>
+</html>
