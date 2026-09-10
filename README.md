@@ -10,4 +10,8 @@ Pages, each seeded with a different spread of WCAG/axe violations:
 - `docs/dashboard.html` — data view: empty document title, heading-order skip, chart image with no alt, table headers built with `td` instead of `th`, `aria-hidden` wrapping a focusable button, unreachable scrollable region, clickable div with no keyboard support
 - `docs/media.html` — media: missing `html lang`, low-contrast body text, video without captions, iframe without title, autoplaying audio, tiny tap targets, positive tabindex
 
-`src/` is an unused Vite/React scaffold — not built or deployed; `docs/` is the actual crawl target.
+Every element above carries a unique `id` so Auto-Fix's source locator can always
+resolve it to exactly one place in `docs/` — the repo used to also ship an unused
+Vite/React scaffold under `src/` that duplicated these same class names and caused
+"Could not uniquely match" failures across the whole set; it's been removed since
+it was never built or deployed.

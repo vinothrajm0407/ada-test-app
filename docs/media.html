@@ -10,7 +10,7 @@
     nav { background: #222; padding: 12px 20px; }
     nav a { color: #444; margin-right: 16px; text-decoration: none; }
     .content { padding: 20px; max-width: 800px; }
-    .tiny-btn { width: 14px; height: 14px; padding: 0; border: none; font-size: 8px; }
+    .tiny-btn-play, .tiny-btn-stop, .tiny-btn-repeat { width: 14px; height: 14px; padding: 0; border: none; font-size: 8px; }
   </style>
 </head>
 <body>
@@ -39,9 +39,9 @@
 
     <!-- target-size: cluster of tiny icon-only buttons -->
     <div>
-      <button class="tiny-btn">&#9654;</button>
-      <button class="tiny-btn">&#9724;</button>
-      <button class="tiny-btn">&#8635;</button>
+      <button class="tiny-btn-play">&#9654;</button>
+      <button class="tiny-btn-stop">&#9724;</button>
+      <button class="tiny-btn-repeat">&#8635;</button>
     </div>
 
     <!-- tabindex: positive tabindex anti-pattern -->
