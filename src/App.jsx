@@ -25,7 +25,7 @@ export default function App() {
       <p className="muted-text">Muted text with insufficient contrast</p>
 
       {/* frame-title */}
-      <iframe className="promo-frame" src="https://example.com/promo"></iframe>
+      <iframe className="promo-frame" src="https://example.com/promo" title="Promotions"></iframe>
 
       {/* select-name */}
       <select className="role-select">
