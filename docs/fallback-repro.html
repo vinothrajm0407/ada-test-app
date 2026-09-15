@@ -8,12 +8,13 @@
 <body>
   <!--
     Reproduces "Generate Fix — Built-in fallback fix didn't match this
-    violation's markup" directly: a genuinely classless button wrapping a
-    bare svg — locate_source can already find this (bare-tag fallback), but
-    the OLD _fallback_patch required a class attribute on the violating
-    element just to re-find it, so it gave up even after locate succeeded.
+    violation's markup" directly: the button carries an id (so locate_source
+    resolves it uniquely via its id/class hard-gate — no ambiguity at all),
+    but the OLD _fallback_patch's button-name branch only ever looked for a
+    `class` attribute to re-find the element, so it failed at Generate Fix
+    even though Locate Source had already succeeded.
   -->
-  <button>
+  <button id="download-action">
     <svg width="16" height="16"><rect width="16" height="16" /></svg>
   </button>
 </body>
