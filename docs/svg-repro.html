@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG ambiguity reproduction</title>
+</head>
+<body>
+  <!--
+    Reproduces the reported Auto-Fix bug directly: each icon-only button
+    wraps a bare <svg> with no class/id of its own. Before this fix, locating
+    either svg meant searching the whole repo for a bare "<svg" tag — with
+    two (or, in a real app, dozens) of them present, that's always ambiguous.
+    The ancestor-scoped locator resolves each one via its own uniquely
+    classed parent button instead.
+  -->
+  <button class="download-btn">
+    <svg width="16" height="16"><rect width="16" height="16" /></svg>
+  </button>
+  <button class="share-btn">
+    <svg width="16" height="16"><circle cx="8" cy="8" r="8" /></svg>
+  </button>
+</body>
+</html>
