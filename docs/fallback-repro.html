@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fallback fixer reproduction</title>
+</head>
+<body>
+  <!--
+    Reproduces "Generate Fix — Built-in fallback fix didn't match this
+    violation's markup" directly: a genuinely classless button wrapping a
+    bare svg — locate_source can already find this (bare-tag fallback), but
+    the OLD _fallback_patch required a class attribute on the violating
+    element just to re-find it, so it gave up even after locate succeeded.
+  -->
+  <button>
+    <svg width="16" height="16"><rect width="16" height="16" /></svg>
+  </button>
+</body>
+</html>
